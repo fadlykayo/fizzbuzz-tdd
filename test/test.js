@@ -1,5 +1,9 @@
-var should = require('chai').should()
+const chai = require('chai')
+const should = chai.should()
+const expect = chai.expect
 const fizzbuzz = require('../index')
+const chaiArrays = require('chai-arrays')
+chai.use(chaiArrays)
 
 describe('Fizzbuzz untuk perulangan dari 1 - 100', function () {
   it('should return Fizz if can be divided by 3', function () {
@@ -17,8 +21,9 @@ describe('Fizzbuzz untuk perulangan dari 1 - 100', function () {
     fizzbuzz.convertNumber(10).should.equal('Buzz')
   })
 
-  it('should return FizzBuzz if can be divided by 3 and 5', function () {
+  it.only('should return FizzBuzz if can be divided by 3 and 5', function () {
     fizzbuzz.convertNumber(15).should.equal('FizzBuzz')
     fizzbuzz.convertNumber(30).should.equal('FizzBuzz')
+  // fizzbuzz.convertArray(15).should.equalTo([1, 2, 'Fizz', 4, 'Buzz', 6, 7, 8, 'Fizz', 10, 11, 'Fizz', 13, 14, 'FizzBuzz'])
   })
 })
