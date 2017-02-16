@@ -21,7 +21,7 @@ describe('Fizzbuzz untuk perulangan dari 1 - 100', function () {
     fizzbuzz.convertNumber(10).should.equal('Buzz')
   })
 
-  it.only('should return FizzBuzz if can be divided by 3 and 5', function () {
+  it('should return Buzz if can be divided by 5', function () {
     fizzbuzz.convertNumber(15).should.equal('FizzBuzz')
     fizzbuzz.convertNumber(30).should.equal('FizzBuzz')
   // fizzbuzz.convertArray(15).should.equalTo([1, 2, 'Fizz', 4, 'Buzz', 6, 7, 8, 'Fizz', 10, 11, 'Fizz', 13, 14, 'FizzBuzz'])
